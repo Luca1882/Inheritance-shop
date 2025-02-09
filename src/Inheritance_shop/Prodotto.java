@@ -1,25 +1,6 @@
-/*
-Bisogna creare un NUOVO repository.
-Nome repo: java-inheritance-shop Nel progetto java-inheritance-shop creare la classe Prodotto che gestisce i prodotti dello shop.
-Un prodotto è caratterizzato da:
-codice (numero intero)
-nome
-marca
-prezzo
-iva
-Usate opportunamente i livelli di accesso (public, private), i costruttori, i metodi getter e setter ed
-eventuali altri metodi di “utilità” per fare in modo che:
-il codice prodotto sia accessibile solo in lettura
-gli altri attributi siano accessibili sia in lettura che in scrittura
-Lo shop gestisce diversi tipi di prodotto:
-Smarphone, caratterizzati anche dal codice IMEI e dalla quantità di memoria
-Televisori, caratterizzati dalle dimensioni e dalla proprietà di essere smart oppure no
-Cuffie, caratterizzate dal colore e se sono wireless o cablate
-Utilizzate l’ereditarietà per riutilizzare il codice di Prodotto nella stesura delle classi che gestiscono i vari sotto tipi di prodotto.
-Buon lavoro!
+package Inheritance_shop;
 
- */
-
+// Classe base prodotto
 public class Prodotto {
     private int codice;
     private String nome;
@@ -27,6 +8,7 @@ public class Prodotto {
     private double prezzo;
     private double iva;
 
+    //Costruttore prodotto
     public Prodotto(int codice, String nome, String marca, double prezzo, double iva){
         this.codice = codice;
         this.nome = nome;
@@ -35,14 +17,12 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    //Metodo "solo" get per il codice
     public int getCodice() {
         return codice;
     }
 
-    public void setCodice(int codice) {
-        this.codice = codice;
-    }
-
+    //Metodi Getter & Setter per tutti gli altri valori
     public String getNome() {
         return nome;
     }
